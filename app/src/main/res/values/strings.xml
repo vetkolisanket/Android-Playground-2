@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android Playground 2</string>
+    <string name="speech_to_text">Speech to Text</string>
 </resources>
