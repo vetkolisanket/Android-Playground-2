@@ -5,3 +5,4 @@ TODOs
 - [ ] Search Adapter
 - [ ] Reverse geocode API
 - [ ] Speech to text
+- [ ] Android Jetpack
