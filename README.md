@@ -6,3 +6,4 @@ TODOs
 - [ ] Reverse geocode API
 - [ ] Speech to text
 - [ ] Android Jetpack
+- [ ] Checkstyle
