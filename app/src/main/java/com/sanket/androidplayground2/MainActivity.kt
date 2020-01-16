@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
     btnSpeechToText.setOnClickListener {
       startActivity(SpeechToTextActivity.newIntent(this))
     }
+    btnSearch.setOnClickListener {
+      startActivity(SearchActivity.newIntent(this))
+    }
   }
 
 
