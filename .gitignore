@@ -4,3 +4,4 @@
 app/libs/
 build
 *.iml
+local.properties
