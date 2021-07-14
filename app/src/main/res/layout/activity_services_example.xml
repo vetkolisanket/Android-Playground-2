@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".appcomponents.services.ServicesExampleActivity">
+    tools:context=".appcomponents.services.activities.ServicesExampleActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/foregroundService"
+            android:id="@+id/btnForegroundService"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/foreground_service"/>
