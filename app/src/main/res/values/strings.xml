@@ -14,4 +14,5 @@
     <string name="description">Description</string>
     <string name="starting_service">Starting service</string>
     <string name="stopping_service">Stopping service</string>
+    <string name="background_service">Background Service</string>
 </resources>
