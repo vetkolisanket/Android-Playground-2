@@ -11,3 +11,4 @@ TODOs
 - [ ] Hilt
 - [ ] Coroutines
 - [ ] Jetpack Compose
+- [ ] RxJava
