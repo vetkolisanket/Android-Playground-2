@@ -1,4 +1,4 @@
-package com.sanket.androidplayground2.commons
+package com.sanket.androidplayground2.commons.utils
 
 import android.app.Activity
 import android.content.Context
