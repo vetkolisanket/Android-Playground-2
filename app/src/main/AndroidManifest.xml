@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.sanket.androidplayground2">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".commons.App"
@@ -14,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".HiltActivity" />
+        <activity android:name=".hilt.HiltActivity" />
         <activity android:name=".appcomponents.services.activities.ForegroundServiceActivity" />
         <activity android:name=".appcomponents.services.activities.ServicesExampleActivity" />
         <activity android:name=".appcomponents.AppComponentsActivity" />
