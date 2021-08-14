@@ -16,4 +16,5 @@
     <string name="stopping_service">Stopping service</string>
     <string name="background_service">Background Service</string>
     <string name="bound_service">Bound Service</string>
+    <string name="hilt">hilt</string>
 </resources>
