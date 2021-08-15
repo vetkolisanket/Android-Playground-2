@@ -2,6 +2,7 @@ package com.sanket.androidplayground2.hilt
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -13,11 +14,26 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.commons.utils.Status
 import com.sanket.androidplayground2.data.model.User
+import com.sanket.androidplayground2.di.module.ApiKey
+import com.sanket.androidplayground2.di.module.LibraryKey
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_hilt.*
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class HiltActivity : AppCompatActivity() {
+
+    companion object{
+        val TAG = HiltActivity::class.java.simpleName
+    }
+
+    @ApiKey
+    @Inject
+    lateinit var apiKey:String
+
+    @LibraryKey
+    @Inject
+    lateinit var libraryKey:String
 
     private val userViewModel: UserViewModel by viewModels()
     private lateinit var adapter: UserAdapter
@@ -27,6 +43,8 @@ class HiltActivity : AppCompatActivity() {
         setContentView(R.layout.activity_hilt)
         setupUI()
         setupObserver()
+        Log.d(TAG, "onCreate: $apiKey")
+        Log.d(TAG, "onCreate: $libraryKey")
     }
 
     private fun setupObserver() {

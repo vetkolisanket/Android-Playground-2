@@ -50,4 +50,14 @@ class ApplicationModule {
     @Singleton
     fun provideApiHelper(apiHelper: ApiHelperImpl): ApiHelper = apiHelper
 
+    @ApiKey
+    @Provides
+    @Singleton
+    fun provideApiKey(): String = "My ApiKey"
+
+    @LibraryKey
+    @Provides
+    @Singleton
+    fun provideLibraryKey(): String = "My Library Key"
+
 }
