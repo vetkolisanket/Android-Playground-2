@@ -17,4 +17,5 @@
     <string name="background_service">Background Service</string>
     <string name="bound_service">Bound Service</string>
     <string name="hilt">hilt</string>
+    <string name="coroutines">Coroutines</string>
 </resources>
