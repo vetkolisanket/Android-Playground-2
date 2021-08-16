@@ -8,7 +8,7 @@ TODOs
 - [ ] Android Jetpack
 - [ ] Checkstyle
 - [x] [Foreground Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/ForegroundService.kt)
-- [ ] Hilt
+- [x] [Hilt](https://github.com/vetkolisanket/Android-Playground-2/tree/master/app/src/main/java/com/sanket/androidplayground2/hilt)
 - [ ] Coroutines
 - [ ] Jetpack Compose
 - [ ] RxJava
