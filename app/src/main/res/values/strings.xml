@@ -18,4 +18,5 @@
     <string name="bound_service">Bound Service</string>
     <string name="hilt">hilt</string>
     <string name="coroutines">Coroutines</string>
+    <string name="single_network_call">Single Network Call</string>
 </resources>
