@@ -1,6 +1,7 @@
 package com.sanket.androidplayground2.di.module
 
 import com.sanket.androidplayground2.BuildConfig
+import com.sanket.androidplayground2.data.api.ApiConstants
 import com.sanket.androidplayground2.data.api.ApiHelper
 import com.sanket.androidplayground2.data.api.ApiHelperImpl
 import com.sanket.androidplayground2.data.api.ApiService
@@ -19,7 +20,7 @@ import javax.inject.Singleton
 class ApplicationModule {
 
     @Provides
-    fun provideBaseUrl() = BuildConfig.BASE_URL
+    fun provideHiltExampleBaseUrl() = ApiConstants.HILT_EXAMPLE_URL
 
     @Provides
     @Singleton
