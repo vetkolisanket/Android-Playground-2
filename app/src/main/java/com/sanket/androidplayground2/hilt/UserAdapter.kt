@@ -12,7 +12,7 @@ import com.sanket.androidplayground2.commons.utils.loadImage
 import com.sanket.androidplayground2.data.model.User
 import kotlinx.android.synthetic.main.item_user.view.*
 
-class UserAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+open class UserAdapter(private val users: MutableList<User>) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(user: User) {

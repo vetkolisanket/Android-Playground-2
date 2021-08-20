@@ -1,4 +1,4 @@
-package com.sanket.androidplayground2.hilt
+package com.sanket.androidplayground2.coroutines
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,29 +10,28 @@ import com.sanket.androidplayground2.data.model.User
 import com.sanket.androidplayground2.data.repository.UserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import java.lang.Exception
 import javax.inject.Inject
 
 @HiltViewModel
-open class UserViewModel @Inject constructor(
+class SingleNetworkCallViewModel @Inject constructor(
     private val userRepository: UserRepository,
     private val networkHelper: NetworkHelper
-) : ViewModel() {
+) : ViewModel(){
 
-    private val _users = MutableLiveData<Resource<List<User>>>()
-
-    fun getUsers(): LiveData<Resource<List<User>>> = _users
+    private val users = MutableLiveData<Resource<List<User>>>()
+    fun getUsers(): LiveData<Resource<List<User>>> = users
 
     init { fetchUsers() }
 
     private fun fetchUsers() {
         viewModelScope.launch {
-            _users.postValue(Resource.loading())
-            if (networkHelper.isNetworkConnected()) {
-                userRepository.getUsersResponse().let {
-                    if (it.isSuccessful) {
-                        _users.postValue(Resource.success(it.body()))
-                    } else _users.postValue(Resource.error("No internet connection"))
-                }
+            users.postValue(Resource.loading())
+            try {
+                val usersFromApi = userRepository.getUsers()
+                users.postValue(Resource.success(usersFromApi))
+            } catch (e: Exception) {
+                users.postValue(Resource.error(e.toString()))
             }
         }
     }
