@@ -1,4 +1,4 @@
-package com.sanket.androidplayground2.coroutines
+package com.sanket.androidplayground2.coroutines.single_network_call
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

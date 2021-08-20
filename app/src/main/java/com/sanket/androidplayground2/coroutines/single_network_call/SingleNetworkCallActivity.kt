@@ -1,4 +1,4 @@
-package com.sanket.androidplayground2.coroutines
+package com.sanket.androidplayground2.coroutines.single_network_call
 
 import android.os.Bundle
 import android.view.View
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.commons.utils.Status
+import com.sanket.androidplayground2.coroutines.ApiUserAdapter
 import com.sanket.androidplayground2.data.model.User
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_single_network_call.*
