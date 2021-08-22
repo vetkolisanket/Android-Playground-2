@@ -14,4 +14,10 @@
         android:text="@string/single_network_call"
         />
 
+    <Button
+        android:id="@+id/btnSeriesNetworkCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/series_network_call" />
+
 </LinearLayout>

@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".coroutines.single_network_call.SingleNetworkCallActivity"/>
+        <activity android:name=".coroutines.SeriesNetworkCallActivity"/>
+        <activity android:name=".coroutines.SingleNetworkCallActivity" />
         <activity android:name=".coroutines.CoroutinesExamplesActivity" />
         <activity android:name=".hilt.HiltActivity" />
         <activity android:name=".appcomponents.services.activities.ForegroundServiceActivity" />

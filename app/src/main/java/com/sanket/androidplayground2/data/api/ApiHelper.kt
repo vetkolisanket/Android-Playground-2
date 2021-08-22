@@ -8,5 +8,6 @@ interface ApiHelper {
     suspend fun getUsersResponse(): Response<List<User>>
 
     suspend fun getUsers(): List<User>
+    suspend fun getMoreUsers(): List<User>
 
 }

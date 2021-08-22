@@ -8,5 +8,6 @@ class UserRepository @Inject constructor(private val apiHelper: ApiHelper) {
     suspend fun getUsersResponse() = apiHelper.getUsersResponse()
 
     suspend fun getUsers() = apiHelper.getUsers()
+    suspend fun getMoreUsers() = apiHelper.getMoreUsers()
 
 }

@@ -1,30 +1,30 @@
-package com.sanket.androidplayground2.coroutines.single_network_call
+package com.sanket.androidplayground2.coroutines
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.commons.utils.Status
-import com.sanket.androidplayground2.coroutines.ApiUserAdapter
 import com.sanket.androidplayground2.data.model.User
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_single_network_call.*
+import kotlinx.android.synthetic.main.activity_series_network_call.*
 
 @AndroidEntryPoint
-class SingleNetworkCallActivity : AppCompatActivity() {
+class SeriesNetworkCallActivity : AppCompatActivity() {
 
     private val adapter by lazy { ApiUserAdapter(mutableListOf()) }
-    private val viewModel: SingleNetworkCallViewModel by viewModels()
+    private val viewModel: CoroutinesViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_single_network_call)
+        setContentView(R.layout.activity_series_network_call)
         setupUI()
         setupObserver()
+        viewModel.fetchUsersSerially()
     }
 
     private fun setupUI() {
