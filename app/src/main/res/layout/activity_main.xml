@@ -46,6 +46,13 @@
             android:layout_height="wrap_content"
             android:text="@string/coroutines" />
 
+        <Button
+            android:id="@+id/btnCompose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/compose"
+            />
+
     </LinearLayout>
 
 </ScrollView>

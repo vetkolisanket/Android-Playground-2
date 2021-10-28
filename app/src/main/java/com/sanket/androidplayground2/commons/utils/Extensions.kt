@@ -17,5 +17,5 @@ fun ImageView.loadImage(imageUrl: String) {
     Glide.with(this.context).load(imageUrl).into(this)
 }
 
-fun ViewGroup.inflate(layoutId: Int) =
+fun ViewGroup.inflate(layoutId: Int): View =
     LayoutInflater.from(this.context).inflate(layoutId, this, false)

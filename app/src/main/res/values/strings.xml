@@ -21,4 +21,5 @@
     <string name="single_network_call">Single Network Call</string>
     <string name="series_network_call">Series Network Call</string>
     <string name="parallel_network_call">Parallel Network Call</string>
+    <string name="compose">Compose</string>
 </resources>

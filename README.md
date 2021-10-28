@@ -12,3 +12,4 @@ TODOs
 - [ ] Coroutines
 - [ ] Jetpack Compose
 - [ ] RxJava
+- [ ] Widgets
