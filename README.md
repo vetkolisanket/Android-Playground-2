@@ -13,3 +13,4 @@ TODOs
 - [ ] Jetpack Compose
 - [ ] RxJava
 - [ ] Widgets
+  - [ ] Text Clock
