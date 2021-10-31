@@ -16,7 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".coroutines.ParallelNetworkCallActivity"></activity>
+        <activity
+            android:name=".widgets.WidgetsActivity"
+            android:exported="true" />
+        <activity android:name=".coroutines.ParallelNetworkCallActivity" />
         <activity android:name=".coroutines.SeriesNetworkCallActivity" />
         <activity android:name=".coroutines.SingleNetworkCallActivity" />
         <activity android:name=".coroutines.CoroutinesExamplesActivity" />

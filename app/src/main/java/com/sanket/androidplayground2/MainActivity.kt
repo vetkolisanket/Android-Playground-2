@@ -6,6 +6,7 @@ import com.sanket.androidplayground2.appcomponents.AppComponentsActivity
 import com.sanket.androidplayground2.commons.utils.openActivity
 import com.sanket.androidplayground2.coroutines.CoroutinesExamplesActivity
 import com.sanket.androidplayground2.hilt.HiltActivity
+import com.sanket.androidplayground2.widgets.WidgetsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     btnAppComponents.setOnClickListener { startActivity(AppComponentsActivity.newIntent(this)) }
     btnHilt.setOnClickListener { openActivity<HiltActivity>() }
     btnCoroutines.setOnClickListener { openActivity<CoroutinesExamplesActivity>() }
+    btnWidget.setOnClickListener { openActivity<WidgetsActivity>() }
   }
 
 
