@@ -18,6 +18,6 @@ class CoroutinesExamplesActivity : AppCompatActivity() {
     private fun initBtns() {
         btnSingleNetworkCall.setOnClickListener { openActivity<SingleNetworkCallActivity>() }
         btnSeriesNetworkCall.setOnClickListener { openActivity<SeriesNetworkCallActivity>() }
-
+        btnParallelNetworkCall.setOnClickListener { openActivity<ParallelNetworkCallActivity>() }
     }
 }
