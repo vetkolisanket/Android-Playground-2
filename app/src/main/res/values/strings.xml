@@ -24,4 +24,5 @@
     <string name="compose">Compose</string>
     <string name="widgets">Widgets</string>
     <string name="text_clock">Text Clock</string>
+    <string name="room_database">Room Database</string>
 </resources>

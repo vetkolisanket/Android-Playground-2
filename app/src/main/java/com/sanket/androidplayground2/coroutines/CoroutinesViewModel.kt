@@ -9,6 +9,7 @@ import com.sanket.androidplayground2.commons.utils.Resource
 import com.sanket.androidplayground2.data.model.User
 import com.sanket.androidplayground2.data.repository.UserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
@@ -24,7 +25,7 @@ class CoroutinesViewModel @Inject constructor(
     fun getUsers(): LiveData<Resource<List<User>>> = users
 
     fun fetchUsers() {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             users.postValue(Resource.loading())
             try {
                 val usersFromApi = userRepository.getUsers()
@@ -36,7 +37,7 @@ class CoroutinesViewModel @Inject constructor(
     }
 
     fun fetchUsersSerially() {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             users.postValue(Resource.loading())
             try {
                 val usersFromApi = userRepository.getUsers()
@@ -52,7 +53,7 @@ class CoroutinesViewModel @Inject constructor(
     }
 
     fun fetchUsersParallely() {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             try {
                 //coroutine scope is needed, else in case of any network error it will crash
                 coroutineScope {
