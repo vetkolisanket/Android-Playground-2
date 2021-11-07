@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sanket.androidplayground2.commons.utils.NetworkHelper
 import com.sanket.androidplayground2.commons.utils.Resource
 import com.sanket.androidplayground2.data.model.User
 import com.sanket.androidplayground2.data.repository.UserRepository
@@ -69,6 +68,22 @@ class CoroutinesViewModel @Inject constructor(
 
                     users.postValue(Resource.success(allUsersFromApi))
                 }
+            } catch (e: Exception) {
+                users.postValue(Resource.error(e.localizedMessage ?: e.toString()))
+            }
+        }
+    }
+
+    fun fetchUsersFromDB() {
+        viewModelScope.launch(Dispatchers.IO) {
+            users.postValue(Resource.loading())
+            try {
+                val usersFromDB = userRepository.getUsersFromDB()
+                if (usersFromDB.isEmpty()) {
+                    val usersFromApi = userRepository.getUsers()
+                    userRepository.saveUsersToDB(usersFromApi)
+                    users.postValue(Resource.success(usersFromApi))
+                } else users.postValue(Resource.success(usersFromDB))
             } catch (e: Exception) {
                 users.postValue(Resource.error(e.localizedMessage ?: e.toString()))
             }

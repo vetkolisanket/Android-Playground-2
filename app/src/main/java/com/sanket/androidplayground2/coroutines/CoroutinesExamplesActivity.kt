@@ -19,5 +19,6 @@ class CoroutinesExamplesActivity : AppCompatActivity() {
         btnSingleNetworkCall.setOnClickListener { openActivity<SingleNetworkCallActivity>() }
         btnSeriesNetworkCall.setOnClickListener { openActivity<SeriesNetworkCallActivity>() }
         btnParallelNetworkCall.setOnClickListener { openActivity<ParallelNetworkCallActivity>() }
+        btnRoomDatabase.setOnClickListener { openActivity<RoomDatabaseActivity>() }
     }
 }
