@@ -12,5 +12,6 @@ TODOs
 - [ ] Coroutines
 - [ ] Jetpack Compose
 - [ ] RxJava
+- [ ] Usecase
 - [ ] Widgets
   - [ ] Text Clock
