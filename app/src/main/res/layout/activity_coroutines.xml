@@ -32,4 +32,10 @@
         android:layout_height="wrap_content"
         android:text="@string/room_database" />
 
+    <Button
+        android:id="@+id/btnLongRunningTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/long_running_task" />
+
 </LinearLayout>

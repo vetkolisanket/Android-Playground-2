@@ -17,6 +17,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".coroutines.LongRunningTaskActivity"
+            android:exported="true" />
+        <activity
             android:name=".coroutines.RoomDatabaseActivity"
             android:exported="true" />
         <activity

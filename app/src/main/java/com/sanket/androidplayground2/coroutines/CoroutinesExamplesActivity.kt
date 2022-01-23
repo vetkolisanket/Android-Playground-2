@@ -20,5 +20,6 @@ class CoroutinesExamplesActivity : AppCompatActivity() {
         btnSeriesNetworkCall.setOnClickListener { openActivity<SeriesNetworkCallActivity>() }
         btnParallelNetworkCall.setOnClickListener { openActivity<ParallelNetworkCallActivity>() }
         btnRoomDatabase.setOnClickListener { openActivity<RoomDatabaseActivity>() }
+        btnLongRunningTask.setOnClickListener { openActivity<LongRunningTaskActivity>() }
     }
 }

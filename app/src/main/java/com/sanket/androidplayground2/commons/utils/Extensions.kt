@@ -19,3 +19,11 @@ fun ImageView.loadImage(imageUrl: String) {
 
 fun ViewGroup.inflate(layoutId: Int): View =
     LayoutInflater.from(this.context).inflate(layoutId, this, false)
+
+fun View.show() {
+    this.visibility = View.VISIBLE
+}
+
+fun View.hide() {
+    this.visibility = View.GONE
+}

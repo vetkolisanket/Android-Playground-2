@@ -8,10 +8,7 @@ import com.sanket.androidplayground2.commons.utils.Resource
 import com.sanket.androidplayground2.data.model.User
 import com.sanket.androidplayground2.data.repository.UserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import javax.inject.Inject
 import kotlin.Exception
 
@@ -22,6 +19,9 @@ class CoroutinesViewModel @Inject constructor(
 
     private val users = MutableLiveData<Resource<List<User>>>()
     fun getUsers(): LiveData<Resource<List<User>>> = users
+
+    private val status = MutableLiveData<Resource<String>>()
+    fun getStatus(): LiveData<Resource<String>> = status
 
     fun fetchUsers() {
         viewModelScope.launch(Dispatchers.IO) {
@@ -87,6 +87,14 @@ class CoroutinesViewModel @Inject constructor(
             } catch (e: Exception) {
                 users.postValue(Resource.error(e.localizedMessage ?: e.toString()))
             }
+        }
+    }
+
+    fun doLongRunningTask() {
+        viewModelScope.launch {
+            status.postValue(Resource.loading())
+            delay(5000)
+            status.postValue(Resource.success("Success"))
         }
     }
 

@@ -10,8 +10,11 @@ TODOs
 - [x] [Foreground Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/ForegroundService.kt)
 - [x] [Hilt](https://github.com/vetkolisanket/Android-Playground-2/tree/master/app/src/main/java/com/sanket/androidplayground2/hilt)
 - [ ] Coroutines
+  - [ ] withTimeoutOrNull
 - [ ] Jetpack Compose
 - [ ] RxJava
 - [ ] Usecase
+- [ ] 3rd Party Libraries
+  - [ ] Intuit https://github.com/intuit/sdp
 - [ ] Widgets
-  - [ ] Text Clock
+  - [x] Text Clock

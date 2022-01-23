@@ -25,4 +25,6 @@
     <string name="widgets">Widgets</string>
     <string name="text_clock">Text Clock</string>
     <string name="room_database">Room Database</string>
+    <string name="long_running_task">Long Running Task</string>
+    <string name="long_running_task_started">Long running task started</string>
 </resources>
