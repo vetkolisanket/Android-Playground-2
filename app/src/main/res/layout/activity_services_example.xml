@@ -29,6 +29,13 @@
             android:layout_height="wrap_content"
             android:text="@string/bound_service" />
 
+        <Button
+            android:id="@+id/btnStopWatchWithService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_watch_with_service"
+            />
+
     </LinearLayout>
 
 </ScrollView>

@@ -16,5 +16,6 @@ class ServicesExampleActivity : AppCompatActivity() {
 
     private fun initBtns() {
         btnForegroundService.setOnClickListener { openActivity<ForegroundServiceActivity>() }
+        btnStopWatchWithService.setOnClickListener { openActivity<StopWatchTimerActivity>() }
     }
 }

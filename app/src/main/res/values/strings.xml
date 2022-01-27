@@ -27,4 +27,9 @@
     <string name="room_database">Room Database</string>
     <string name="long_running_task">Long Running Task</string>
     <string name="long_running_task_started">Long running task started</string>
+    <string name="initial_timer">00:00:00</string>
+    <string name="start">start</string>
+    <string name="reset">reset</string>
+    <string name="stop_watch_with_service">Stop Watch With Service</string>
+    <string name="stop">stop</string>
 </resources>

@@ -17,6 +17,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".appcomponents.services.activities.StopWatchTimerActivity"
+            android:exported="true" />
+        <activity
             android:name=".coroutines.LongRunningTaskActivity"
             android:exported="true" />
         <activity
@@ -35,7 +38,8 @@
         <activity android:name=".appcomponents.AppComponentsActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".SpeechToTextActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,6 +48,7 @@
         </activity>
 
         <service android:name=".appcomponents.services.services.ForegroundService" />
+        <service android:name=".appcomponents.services.services.TimerService" />
     </application>
 
 </manifest>
