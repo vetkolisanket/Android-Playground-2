@@ -7,7 +7,9 @@ TODOs
 - [ ] Speech to text
 - [ ] Android Jetpack
 - [ ] Checkstyle
-- [x] [Foreground Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/ForegroundService.kt)
+- [ ] Services
+  - [x] [Foreground Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/ForegroundService.kt)
+  - [x] [StopWatch Using Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/TimerService.kt)
 - [x] [Hilt](https://github.com/vetkolisanket/Android-Playground-2/tree/master/app/src/main/java/com/sanket/androidplayground2/hilt)
 - [ ] Coroutines
   - [ ] withTimeoutOrNull
@@ -18,3 +20,4 @@ TODOs
   - [ ] Intuit https://github.com/intuit/sdp
 - [ ] Widgets
   - [x] Text Clock
+  - [ ] Custom Loading Dialog
