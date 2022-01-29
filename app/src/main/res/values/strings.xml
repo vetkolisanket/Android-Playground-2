@@ -32,4 +32,6 @@
     <string name="reset">reset</string>
     <string name="stop_watch_with_service">Stop Watch With Service</string>
     <string name="stop">stop</string>
+    <string name="loading_3_dots">Loading...</string>
+    <string name="custom_loading_dialog">Custom Loading Dialog</string>
 </resources>
