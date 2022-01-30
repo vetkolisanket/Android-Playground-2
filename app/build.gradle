@@ -10,7 +10,6 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.sanket.androidplayground2"
         minSdkVersion 16
