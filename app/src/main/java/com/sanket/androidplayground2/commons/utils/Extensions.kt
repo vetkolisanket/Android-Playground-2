@@ -1,6 +1,7 @@
 package com.sanket.androidplayground2.commons.utils
 
 import android.app.Activity
+import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,6 +12,10 @@ import com.bumptech.glide.Glide
 
 inline fun <reified T : Activity> Context.openActivity(block: Intent.() -> Unit = {}) {
     startActivity(Intent(this, T::class.java).apply(block))
+}
+
+inline fun <reified T: Service> Context.startService() {
+    startService(Intent(this, T::class.java))
 }
 
 fun ImageView.loadImage(imageUrl: String) {

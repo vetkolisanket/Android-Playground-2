@@ -53,6 +53,7 @@
 
         <service android:name=".appcomponents.services.services.ForegroundService" />
         <service android:name=".appcomponents.services.services.TimerService" />
+        <service android:name=".appcomponents.services.services.MyBackgroundService" />
     </application>
 
 </manifest>
