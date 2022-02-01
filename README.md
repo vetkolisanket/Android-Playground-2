@@ -20,4 +20,5 @@ TODOs
   - [ ] Intuit https://github.com/intuit/sdp
 - [ ] Widgets
   - [x] Text Clock
-  - [ ] Custom Loading Dialog
+  - [x] Custom Loading Dialog
+  - [ ] Custom Progress Button
