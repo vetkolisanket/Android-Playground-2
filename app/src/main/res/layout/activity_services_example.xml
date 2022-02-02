@@ -12,16 +12,22 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btnBackgroundService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/background_service"/>
+
+        <Button
             android:id="@+id/btnForegroundService"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/foreground_service"/>
 
         <Button
-            android:id="@+id/btnBackgroundService"
+            android:id="@+id/btnForegroundService2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/background_service"/>
+            android:text="@string/foreground_service_2"/>
 
         <Button
             android:id="@+id/btnBoundService"

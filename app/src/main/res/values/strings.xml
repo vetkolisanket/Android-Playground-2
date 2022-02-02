@@ -8,6 +8,7 @@
     <string name="app_components">App Components</string>
     <string name="services">Services</string>
     <string name="foreground_service">Foreground Service</string>
+    <string name="foreground_service_2">Foreground Service 2</string>
     <string name="start_service">Start Service</string>
     <string name="stop_service">Stop Service</string>
     <string name="foreground_service_title">Foreground Service Title</string>
