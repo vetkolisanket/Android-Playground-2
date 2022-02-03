@@ -33,6 +33,11 @@
     <string name="reset">reset</string>
     <string name="stop_watch_with_service">Stop Watch With Service</string>
     <string name="stop">stop</string>
-    <string name="loading_3_dots">Loading...</string>
+    <string name="loading_3_dots">Loading…</string>
     <string name="custom_loading_dialog">Custom Loading Dialog</string>
+    <string name="simple_coroutine">Simple Coroutine</string>
+    <string name="work_1">work 1</string>
+    <string name="work_2">work 2</string>
+    <string name="work_serially">work serially</string>
+    <string name="work_parallelly">work parallelly</string>
 </resources>

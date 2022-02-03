@@ -16,6 +16,7 @@ TODOs
 - [ ] Jetpack Compose
 - [ ] RxJava
 - [ ] Usecase
+- [ ] Work Manager
 - [ ] 3rd Party Libraries
   - [ ] Intuit https://github.com/intuit/sdp
 - [ ] Widgets

@@ -2,9 +2,10 @@ package com.sanket.androidplayground2.coroutines
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.sanket.androidplayground2.FragmentHolderActivity
 import com.sanket.androidplayground2.R
+import com.sanket.androidplayground2.commons.Constants
 import com.sanket.androidplayground2.commons.utils.openActivity
-import com.sanket.androidplayground2.coroutines.SingleNetworkCallActivity
 import kotlinx.android.synthetic.main.activity_coroutines.*
 
 class CoroutinesExamplesActivity : AppCompatActivity() {
@@ -21,5 +22,8 @@ class CoroutinesExamplesActivity : AppCompatActivity() {
         btnParallelNetworkCall.setOnClickListener { openActivity<ParallelNetworkCallActivity>() }
         btnRoomDatabase.setOnClickListener { openActivity<RoomDatabaseActivity>() }
         btnLongRunningTask.setOnClickListener { openActivity<LongRunningTaskActivity>() }
+        btnSimpleCoroutines.setOnClickListener { openActivity<FragmentHolderActivity> {
+            putExtra(Constants.FRAGMENT_TYPE, Constants.Fragments.SIMPLE_COROUTINES)
+        } }
     }
 }

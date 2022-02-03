@@ -8,6 +8,13 @@
     tools:context=".coroutines.CoroutinesExamplesActivity">
 
     <Button
+        android:id="@+id/btnSimpleCoroutines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_coroutine"
+        />
+
+    <Button
         android:id="@+id/btnSingleNetworkCall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
