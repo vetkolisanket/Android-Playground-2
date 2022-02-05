@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_simple_coroutines.view.*
 import kotlinx.coroutines.*
 import kotlin.random.Random
 
-class SimpleCoroutinesFragment private constructor(): Fragment() {
+class SimpleCoroutinesFragment private constructor() : Fragment() {
 
     private lateinit var binding: FragmentSimpleCoroutinesBinding
 
@@ -34,6 +34,32 @@ class SimpleCoroutinesFragment private constructor(): Fragment() {
             setupBtnWork2()
             setupBtnWorkSerially()
             setupBtnWorkParallelly()
+            setupBtnWithTimeoutOrNull()
+        }
+    }
+
+    private fun setupBtnWithTimeoutOrNull() {
+        btnWithTimeoutOrNull.setOnClickListener {
+            CoroutineScope(Dispatchers.IO).launch {
+                val time = System.currentTimeMillis()
+                val work = withTimeoutOrNull(2000) {
+                    val work1 = doWork1(Random.nextLong(500, 1500))
+                    val work2 = doWork2(Random.nextLong(500, 1500))
+                    "$work1 $work2"
+                }
+                withContext(Dispatchers.Main) {
+                    work?.let {
+                        tvResult.text = it
+                        Toast.makeText(
+                            context,
+                            "Time taken with timeout ${System.currentTimeMillis() - time}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } ?: kotlin.run {
+                        Toast.makeText(context, "Timeout", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
         }
     }
 
@@ -110,13 +136,13 @@ class SimpleCoroutinesFragment private constructor(): Fragment() {
         }
     }
 
-    private suspend fun doWork1(): String {
-        delay(1000)
+    private suspend fun doWork1(time: Long = 1000): String {
+        delay(time)
         return "Work 1"
     }
 
-    private suspend fun doWork2(): String {
-        delay(1000)
+    private suspend fun doWork2(time: Long = 1000): String {
+        delay(time)
         return "Work 2"
     }
 

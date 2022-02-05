@@ -34,4 +34,10 @@
         android:layout_height="wrap_content"
         android:text="@string/work_parallelly" />
 
+    <Button
+        android:id="@+id/btnWithTimeoutOrNull"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/with_timeout_or_null" />
+
 </LinearLayout>

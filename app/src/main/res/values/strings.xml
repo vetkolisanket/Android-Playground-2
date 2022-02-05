@@ -40,4 +40,5 @@
     <string name="work_2">work 2</string>
     <string name="work_serially">work serially</string>
     <string name="work_parallelly">work parallelly</string>
+    <string name="with_timeout_or_null">with timeout or null</string>
 </resources>
