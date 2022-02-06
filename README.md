@@ -13,6 +13,7 @@ TODOs
 - [x] [Hilt](https://github.com/vetkolisanket/Android-Playground-2/tree/master/app/src/main/java/com/sanket/androidplayground2/hilt)
 - [ ] Coroutines
   - [ ] withTimeoutOrNull
+- [ ] Threading https://www.youtube.com/watch?v=QfQE1ayCzf8&list=PLrnPJCHvNZuD52mtV8NvazNYIyIVPVZRa&ab_channel=CodinginFlow
 - [ ] Jetpack Compose
 - [ ] RxJava
 - [ ] Usecase
