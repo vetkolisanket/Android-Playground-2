@@ -7,12 +7,21 @@ TODOs
 - [ ] Speech to text
 - [ ] Android Jetpack
 - [ ] Checkstyle
-- [ ] Services
-  - [x] [Foreground Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/ForegroundService.kt)
-  - [x] [StopWatch Using Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/TimerService.kt)
+- [ ] Android App Components
+  - [ ] Activities
+    - [ ] Lifecycle
+  - [ ] Fragments
+    - [ ] Lifecycle
+  - [ ] Views
+    - [ ] Lifecycle
+  - [ ] Content Provider
+  - [ ] Broadcast Receiver 
+  - [ ] Services
+    - [x] [Foreground Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/ForegroundService.kt)
+    - [x] [StopWatch Using Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/TimerService.kt)
 - [x] [Hilt](https://github.com/vetkolisanket/Android-Playground-2/tree/master/app/src/main/java/com/sanket/androidplayground2/hilt)
 - [ ] Coroutines
-  - [ ] withTimeoutOrNull
+  - [x] withTimeoutOrNull
 - [ ] Threading https://www.youtube.com/watch?v=QfQE1ayCzf8&list=PLrnPJCHvNZuD52mtV8NvazNYIyIVPVZRa&ab_channel=CodinginFlow
 - [ ] Jetpack Compose
 - [ ] RxJava
