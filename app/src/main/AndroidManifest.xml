@@ -18,6 +18,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".appcomponents.activity.ExamplesActivity"
+            android:exported="false" />
+        <activity
             android:name=".FragmentHolderActivity"
             android:exported="true" />
         <activity
@@ -56,7 +59,9 @@
         <service android:name=".appcomponents.services.services.TimerService" />
         <service android:name=".appcomponents.services.services.MyBackgroundService" />
         <service android:name=".appcomponents.services.services.MyForegroundService" />
-        <receiver android:name=".appcomponents.services.MyBroadcastReceiver"
+
+        <receiver
+            android:name=".appcomponents.services.MyBroadcastReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

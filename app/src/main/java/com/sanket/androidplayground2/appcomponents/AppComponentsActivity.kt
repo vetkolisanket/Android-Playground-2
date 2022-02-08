@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sanket.androidplayground2.R
+import com.sanket.androidplayground2.appcomponents.activity.ExamplesActivity
 import com.sanket.androidplayground2.appcomponents.services.activities.ServicesExampleActivity
 import com.sanket.androidplayground2.commons.utils.openActivity
 import kotlinx.android.synthetic.main.activity_app_components.*
@@ -18,6 +19,7 @@ class AppComponentsActivity : AppCompatActivity() {
 
     private fun initBtns() {
         btnService.setOnClickListener { openActivity<ServicesExampleActivity>() }
+        btnActivity.setOnClickListener { openActivity<ExamplesActivity>() }
     }
 
     companion object {
