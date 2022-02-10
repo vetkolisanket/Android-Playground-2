@@ -34,3 +34,4 @@ TODOs
   - [x] Text Clock
   - [x] Custom Loading Dialog
   - [ ] Custom Progress Button
+  - [ ] No internet snackbar https://medium.com/mindorks/create-a-network-sensing-activity-in-android-614a1fa62a22
