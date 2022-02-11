@@ -7,9 +7,10 @@ TODOs
 - [ ] Speech to text
 - [ ] Android Jetpack
 - [ ] Checkstyle
-- [ ] Android App Components
+- [ ] Android App Components 
   - [ ] Activities
     - [ ] Lifecycle
+    - [ ] Launch modes
   - [ ] Fragments
     - [ ] Lifecycle
   - [ ] Views
