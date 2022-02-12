@@ -18,6 +18,12 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".appcomponents.activity.BLifecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appcomponents.activity.ALifecycleActivity"
+            android:exported="false" />
+        <activity
             android:name=".appcomponents.activity.ExamplesActivity"
             android:exported="false" />
         <activity

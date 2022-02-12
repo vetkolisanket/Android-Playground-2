@@ -9,7 +9,7 @@ TODOs
 - [ ] Checkstyle
 - [ ] Android App Components 
   - [ ] Activities
-    - [ ] Lifecycle
+    - [x] Lifecycle
     - [ ] Launch modes
   - [ ] Fragments
     - [ ] Lifecycle
