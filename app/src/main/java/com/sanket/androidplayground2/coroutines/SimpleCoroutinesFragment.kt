@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.sanket.androidplayground2.databinding.FragmentSimpleCoroutinesBinding
 import kotlinx.android.synthetic.main.fragment_simple_coroutines.*
 import kotlinx.android.synthetic.main.fragment_simple_coroutines.view.*
 import kotlinx.coroutines.*
+import kotlin.coroutines.resume
 import kotlin.random.Random
 
 class SimpleCoroutinesFragment private constructor() : Fragment() {
@@ -35,6 +37,26 @@ class SimpleCoroutinesFragment private constructor() : Fragment() {
             setupBtnWorkSerially()
             setupBtnWorkParallelly()
             setupBtnWithTimeoutOrNull()
+            setupBtnSuspendCancellableCoroutine()
+        }
+    }
+
+    private fun setupBtnSuspendCancellableCoroutine() {
+        btnSuspendCancellableCoroutine.setOnClickListener {
+            lifecycleScope.launch(Dispatchers.IO) {
+                val workString = withTimeoutOrNull(2000) {
+                    val work1 = doWork1(Random.nextLong(500, 1500))
+                    val work2 = doWork2(Random.nextLong(500, 1500))
+                    val work = suspendCancellableCoroutine<String> {
+                        it.resume("$work1 $work2")
+                        it.invokeOnCancellation {
+                            Toast.makeText(context, "Cancelled", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    work
+                }
+                workString?.let { tvResult.text = it }
+            }
         }
     }
 

@@ -40,4 +40,10 @@
         android:layout_height="wrap_content"
         android:text="@string/with_timeout_or_null" />
 
+    <Button
+        android:id="@+id/btnSuspendCancellableCoroutine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/suspend_cancellable_coroutine" />
+
 </LinearLayout>
