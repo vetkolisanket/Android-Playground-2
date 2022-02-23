@@ -29,6 +29,8 @@ TODOs
 - [ ] RxJava
 - [ ] Usecase
 - [ ] Work Manager
+- [ ] Modularization
+  - [ ] Dynamic delivery
 - [ ] 3rd Party Libraries
   - [ ] Intuit https://github.com/intuit/sdp
 - [ ] Widgets
