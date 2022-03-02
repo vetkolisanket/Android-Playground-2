@@ -60,6 +60,13 @@
             android:text="@string/widgets"
             />
 
+        <Button
+            android:id="@+id/btnLibraries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/libraries"
+            />
+
     </LinearLayout>
 
 </ScrollView>
