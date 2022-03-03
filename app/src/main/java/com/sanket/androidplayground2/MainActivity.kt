@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     btnHilt.setOnClickListener { openActivity<HiltActivity>() }
     btnCoroutines.setOnClickListener { openActivity<CoroutinesExamplesActivity>() }
     btnWidget.setOnClickListener { openActivity<WidgetsActivity>() }
+    btnLibraries.setOnClickListener { openActivity<LibrariesActivity>() }
   }
 
 
