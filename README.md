@@ -38,3 +38,9 @@ TODOs
   - [x] Custom Loading Dialog
   - [ ] Custom Progress Button
   - [ ] No internet snackbar https://medium.com/mindorks/create-a-network-sensing-activity-in-android-614a1fa62a22
+  - [ ] Image picker
+  - [ ] Camera image capture
+  - [ ] Camera video capture
+  - [ ] Custom camera
+    - [ ] Whatsapp
+    - [ ] Instagram
