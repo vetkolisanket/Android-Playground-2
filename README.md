@@ -6,6 +6,8 @@ TODOs
 - [ ] Reverse geocode API
 - [ ] Speech to text
 - [ ] Android Jetpack
+  - [ ] Jetpack Compose
+  - [ ] Paging
 - [ ] Checkstyle
 - [ ] Android App Components 
   - [ ] Activities
