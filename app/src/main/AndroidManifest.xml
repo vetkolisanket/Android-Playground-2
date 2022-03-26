@@ -18,6 +18,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".compose.ComposeActivity"
+            android:exported="false" />
+        <activity
             android:name=".LibrariesActivity"
             android:exported="false" />
         <activity
