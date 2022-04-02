@@ -46,3 +46,4 @@ TODOs
   - [ ] Custom camera
     - [ ] Whatsapp
     - [ ] Instagram
+  - [ ] ML Kit
