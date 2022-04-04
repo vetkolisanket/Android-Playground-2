@@ -7,6 +7,7 @@ TODOs
 - [ ] Android Jetpack
   - [ ] Jetpack Compose
   - [ ] Paging
+  - [ ] Navigation
 - [ ] Checkstyle
 - [ ] Android App Components 
   - [ ] Activities
