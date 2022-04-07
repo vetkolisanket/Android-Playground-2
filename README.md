@@ -27,7 +27,6 @@ TODOs
   - [x] withTimeoutOrNull
   - [ ] suspendCancellableCoroutine
 - [ ] Threading https://www.youtube.com/watch?v=QfQE1ayCzf8&list=PLrnPJCHvNZuD52mtV8NvazNYIyIVPVZRa&ab_channel=CodinginFlow
-- [ ] Jetpack Compose
 - [ ] RxJava
 - [ ] Usecase
 - [ ] Work Manager
