@@ -22,6 +22,8 @@ TODOs
   - [ ] Services
     - [x] [Foreground Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/ForegroundService.kt)
     - [x] [StopWatch Using Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/TimerService.kt)
+  - [ ] Intent
+    - [ ] Flags
 - [x] [Hilt](https://github.com/vetkolisanket/Android-Playground-2/tree/master/app/src/main/java/com/sanket/androidplayground2/hilt)
 - [ ] Coroutines
   - [x] withTimeoutOrNull
