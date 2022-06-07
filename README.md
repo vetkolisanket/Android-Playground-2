@@ -2,12 +2,12 @@
 Why Android Playground 2? Well I messed up the first one pretty bad :P
 
 TODOs
-- [ ] Search Adapter
 - [ ] Reverse geocode API
 - [ ] Speech to text
 - [ ] Android Jetpack
   - [ ] Jetpack Compose
   - [ ] Paging
+  - [ ] Navigation
 - [ ] Checkstyle
 - [ ] Android App Components 
   - [ ] Activities
@@ -22,12 +22,13 @@ TODOs
   - [ ] Services
     - [x] [Foreground Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/ForegroundService.kt)
     - [x] [StopWatch Using Service](app/src/main/java/com/sanket/androidplayground2/appcomponents/services/services/TimerService.kt)
+  - [ ] Intent
+    - [ ] Flags
 - [x] [Hilt](https://github.com/vetkolisanket/Android-Playground-2/tree/master/app/src/main/java/com/sanket/androidplayground2/hilt)
 - [ ] Coroutines
   - [x] withTimeoutOrNull
   - [ ] suspendCancellableCoroutine
 - [ ] Threading https://www.youtube.com/watch?v=QfQE1ayCzf8&list=PLrnPJCHvNZuD52mtV8NvazNYIyIVPVZRa&ab_channel=CodinginFlow
-- [ ] Jetpack Compose
 - [ ] RxJava
 - [ ] Usecase
 - [ ] Work Manager
@@ -46,3 +47,5 @@ TODOs
   - [ ] Custom camera
     - [ ] Whatsapp
     - [ ] Instagram
+  - [ ] ML Kit
+  - [ ] Webview POCs
