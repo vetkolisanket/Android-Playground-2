@@ -6,4 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".third_party.LottieActivity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/svBtns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <ScrollView
+        android:id="@+id/svBtns"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnBullseye"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bullseye"
+                />
+
+            <Button
+                android:id="@+id/btnFullScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fullscreen"
+                />
+
+            <Button
+                android:id="@+id/btnHamburgerArrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hamburger_arrow"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

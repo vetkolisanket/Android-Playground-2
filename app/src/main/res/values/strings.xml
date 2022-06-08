@@ -47,4 +47,7 @@
     <string name="go_to_activity_b">Go to activity B</string>
     <string name="libraries">Libraries</string>
     <string name="lottie">Lottie</string>
+    <string name="bullseye">Bullseye</string>
+    <string name="fullscreen">FullScreen</string>
+    <string name="hamburger_arrow">hamburger arrow</string>
 </resources>
