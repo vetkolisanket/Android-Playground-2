@@ -7,6 +7,7 @@ import com.sanket.androidplayground2.commons.utils.openActivity
 import com.sanket.androidplayground2.compose.ComposeActivity
 import com.sanket.androidplayground2.coroutines.CoroutinesExamplesActivity
 import com.sanket.androidplayground2.hilt.HiltActivity
+import com.sanket.androidplayground2.third_party.LibrariesActivity
 import com.sanket.androidplayground2.widgets.WidgetsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 

@@ -36,6 +36,7 @@ TODOs
   - [ ] Dynamic delivery
 - [ ] 3rd Party Libraries
   - [ ] Intuit https://github.com/intuit/sdp
+  - [ ] Lottie https://github.com/airbnb/lottie-android/
 - [ ] Widgets
   - [x] Text Clock
   - [x] Custom Loading Dialog

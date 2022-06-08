@@ -46,4 +46,5 @@
     <string name="suspend_cancellable_coroutine">suspend cancellable coroutine</string>
     <string name="go_to_activity_b">Go to activity B</string>
     <string name="libraries">Libraries</string>
+    <string name="lottie">Lottie</string>
 </resources>
