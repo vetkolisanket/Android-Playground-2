@@ -10,6 +10,8 @@ import com.sanket.androidplayground2.data.api.ApiService
 import com.sanket.androidplayground2.data.db.AppDatabase
 import com.sanket.androidplayground2.data.db.DatabaseHelper
 import com.sanket.androidplayground2.data.db.DatabaseHelperImpl
+import com.sanket.androidplayground2.widgets.internet_observer.ConnectivityObserver
+import com.sanket.androidplayground2.widgets.internet_observer.NetworkConnectivityObserver
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -66,11 +68,12 @@ class ApplicationModule {
 
     @Provides
     @Singleton
-    fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase = Room.databaseBuilder(
-        context,
-        AppDatabase::class.java,
-        ANDROID_PLAYGROUND
-    ).build()
+    fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase =
+        Room.databaseBuilder(
+            context,
+            AppDatabase::class.java,
+            ANDROID_PLAYGROUND
+        ).build()
 
     @ApiKey
     @Provides
@@ -81,5 +84,10 @@ class ApplicationModule {
     @Provides
     @Singleton
     fun provideLibraryKey(): String = "My Library Key"
+
+    @Provides
+    @Singleton
+    fun provideConnectivityObserver(@ApplicationContext context: Context): ConnectivityObserver =
+        NetworkConnectivityObserver(context)
 
 }

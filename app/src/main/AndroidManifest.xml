@@ -18,6 +18,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".widgets.internet_observer.InternetObserverActivity"
+            android:exported="false" />
+        <activity
             android:name=".third_party.LottieActivity"
             android:exported="false" />
         <activity

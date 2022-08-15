@@ -50,4 +50,6 @@
     <string name="bullseye">Bullseye</string>
     <string name="fullscreen">FullScreen</string>
     <string name="hamburger_arrow">hamburger arrow</string>
+    <string name="network_status_s">Network Status: %s</string>
+    <string name="internet_observer">Internet Observer</string>
 </resources>

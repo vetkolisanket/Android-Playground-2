@@ -67,6 +67,13 @@
             android:text="@string/libraries"
             />
 
+        <Button
+            android:id="@+id/btnInternetObserver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/internet_observer"
+            />
+
     </LinearLayout>
 
 </ScrollView>
