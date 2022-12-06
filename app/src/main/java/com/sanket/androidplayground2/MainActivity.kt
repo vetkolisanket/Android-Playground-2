@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.sanket.androidplayground2.appcomponents.AppComponentsActivity
 import com.sanket.androidplayground2.commons.utils.openActivity
+import com.sanket.androidplayground2.communication.CommunicationActivity
 import com.sanket.androidplayground2.compose.ComposeActivity
 import com.sanket.androidplayground2.coroutines.CoroutinesExamplesActivity
 import com.sanket.androidplayground2.hilt.HiltActivity
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         btnLibraries.setOnClickListener { openActivity<LibrariesActivity>() }
         btnCompose.setOnClickListener { openActivity<ComposeActivity>() }
         btnInternetObserver.setOnClickListener { openActivity<InternetObserverActivity>() }
+        btnCommunication.setOnClickListener { openActivity<CommunicationActivity> {  } }
     }
 
 

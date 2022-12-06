@@ -52,4 +52,6 @@
     <string name="hamburger_arrow">hamburger arrow</string>
     <string name="network_status_s">Network Status: %s</string>
     <string name="internet_observer">Internet Observer</string>
+    <string name="communication">Communication</string>
+    <string name="server_sent_events">Server Sent Events</string>
 </resources>
