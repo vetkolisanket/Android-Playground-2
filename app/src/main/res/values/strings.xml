@@ -54,4 +54,9 @@
     <string name="internet_observer">Internet Observer</string>
     <string name="communication">Communication</string>
     <string name="server_sent_events">Server Sent Events</string>
+    <string name="misc">Misc</string>
+    <string name="dynamic_launcher_icon_and_text">Dynamic Launcher Icon And Text</string>
+    <string name="launcher_one_application_success">Launcher one has been applied successfully!</string>
+    <string name="launcher_two_application_success">Launcher two has been applied successfully!</string>
+    <string name="launcher_three_application_success">Launcher three has been applied successfully!</string>
 </resources>

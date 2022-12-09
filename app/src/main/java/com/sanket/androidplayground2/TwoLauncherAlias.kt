@@ -1,0 +1,3 @@
+package com.sanket.androidplayground2
+
+class TwoLauncherAlias

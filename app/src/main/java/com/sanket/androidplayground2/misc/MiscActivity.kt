@@ -1,0 +1,22 @@
+package com.sanket.androidplayground2.misc
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.sanket.androidplayground2.R
+import com.sanket.androidplayground2.commons.utils.openActivity
+import com.sanket.androidplayground2.databinding.ActivityMiscBinding
+
+class MiscActivity : AppCompatActivity() {
+
+    private val binding: ActivityMiscBinding by lazy { ActivityMiscBinding.inflate(layoutInflater) }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
+        initClickListener()
+    }
+
+    private fun initClickListener() {
+        binding.btnDynamicLauncherIconAndText.setOnClickListener { openActivity<DynamicLauncherIconAndTextActivity>() }
+    }
+}
