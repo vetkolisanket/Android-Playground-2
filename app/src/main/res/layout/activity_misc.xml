@@ -15,4 +15,11 @@
         android:text="@string/dynamic_launcher_icon_and_text"
         />
 
+    <Button
+        android:id="@+id/btnEncryptedSharedPreferences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/encrypted_shared_preferences"
+        />
+
 </LinearLayout>

@@ -17,6 +17,9 @@ class MiscActivity : AppCompatActivity() {
     }
 
     private fun initClickListener() {
-        binding.btnDynamicLauncherIconAndText.setOnClickListener { openActivity<DynamicLauncherIconAndTextActivity>() }
+        binding.apply {
+            btnDynamicLauncherIconAndText.setOnClickListener { openActivity<DynamicLauncherIconAndTextActivity>() }
+            btnEncryptedSharedPreferences.setOnClickListener { openActivity<EncryptedSharedPreferencesActivity>() }
+        }
     }
 }

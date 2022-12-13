@@ -18,21 +18,24 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".misc.DynamicLauncherIconAndTextActivity"
+            android:name=".misc.EncryptedSharedPreferencesActivity"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
+        <activity
+            android:name=".misc.DynamicLauncherIconAndTextActivity"
+            android:exported="false"></activity>
         <activity
             android:name=".misc.MiscActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".communication.SSEActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".communication.CommunicationActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".widgets.internet_observer.InternetObserverActivity"
             android:exported="false" />
@@ -79,7 +82,9 @@
         <activity android:name=".appcomponents.AppComponentsActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".SpeechToTextActivity" />
-        <activity android:name=".MainActivity" android:exported="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -88,43 +93,38 @@
         </activity>
 
         <activity-alias
-            android:exported="true"
-            android:name="OneLauncherAlias"
-            android:enabled="true"
-            android:icon="@drawable/ic_baseline_mood_24"
-            android:label="One"
-            android:targetActivity=".MainActivity"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
-
-        <activity-alias
-            android:exported="true"
-            android:name="TwoLauncherAlias"
-            android:targetActivity=".MainActivity"
+            android:name=".ThreeLauncherAlias"
             android:enabled="false"
-            android:icon="@drawable/ic_baseline_mood_bad_24"
-            android:label="Two"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
-
-        <activity-alias
             android:exported="true"
-            android:name="ThreeLauncherAlias"
-            android:targetActivity=".MainActivity"
-            android:enabled="false"
             android:icon="@drawable/ic_baseline_outlet_24"
             android:label="Three"
-            >
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".TwoLauncherAlias"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@drawable/ic_baseline_mood_bad_24"
+            android:label="Two"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".OneLauncherAlias"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/ic_baseline_mood_24"
+            android:label="One"
+            android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

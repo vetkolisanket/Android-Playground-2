@@ -59,4 +59,9 @@
     <string name="launcher_one_application_success">Launcher one has been applied successfully!</string>
     <string name="launcher_two_application_success">Launcher two has been applied successfully!</string>
     <string name="launcher_three_application_success">Launcher three has been applied successfully!</string>
+    <string name="encrypted_shared_preferences">Encrypted Shared Preferences</string>
+    <string name="key">key</string>
+    <string name="value">value</string>
+    <string name="save">save</string>
+    <string name="show">show</string>
 </resources>
