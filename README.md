@@ -50,3 +50,5 @@ TODOs
     - [ ] Instagram
   - [ ] ML Kit
   - [ ] Webview POCs
+  - [ ] Socket connections
+  - [ ] SSE
