@@ -22,4 +22,11 @@
         android:text="@string/encrypted_shared_preferences"
         />
 
+    <Button
+        android:id="@+id/btnAddCalendarEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_calendar_event"
+        />
+
 </LinearLayout>

@@ -48,7 +48,10 @@ TODOs
   - [ ] Custom camera
     - [ ] Whatsapp
     - [ ] Instagram
+- [ ] Misc
   - [ ] ML Kit
   - [ ] Webview POCs
   - [ ] Socket connections
   - [ ] SSE
+  - [ ] Add Calendar Event
+  - [ ] Custom Notification Sound

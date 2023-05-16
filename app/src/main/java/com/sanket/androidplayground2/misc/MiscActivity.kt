@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.commons.utils.openActivity
 import com.sanket.androidplayground2.databinding.ActivityMiscBinding
+import kotlinx.android.synthetic.main.activity_misc.*
 
 class MiscActivity : AppCompatActivity() {
 
@@ -20,6 +21,7 @@ class MiscActivity : AppCompatActivity() {
         binding.apply {
             btnDynamicLauncherIconAndText.setOnClickListener { openActivity<DynamicLauncherIconAndTextActivity>() }
             btnEncryptedSharedPreferences.setOnClickListener { openActivity<EncryptedSharedPreferencesActivity>() }
+            btnAddCalendarEvent.setOnClickListener { openActivity<AddCalendarEventActivity>() }
         }
     }
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".misc.AddCalendarEventActivity"
+    android:padding="16dp"
+    >
+
+    <EditText
+        android:id="@+id/etEventTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/enter_event_title"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/btnSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etEventTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/select_date"
+        />
+
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnSelectDate"
+        app:layout_constraintEnd_toStartOf="@id/btnSelectDate"
+        app:layout_constraintBottom_toBottomOf="@id/btnSelectDate"
+        android:gravity="center"
+        tools:text="16 May 2023"
+        />
+
+    <Button
+        android:id="@+id/btnSelectTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnSelectDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/select_time"
+        />
+
+    <TextView
+        android:id="@+id/tvSelectedTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnSelectTime"
+        app:layout_constraintEnd_toStartOf="@id/btnSelectTime"
+        app:layout_constraintBottom_toBottomOf="@id/btnSelectTime"
+        android:gravity="center"
+        tools:text="11:56 AM"
+        />
+
+    <Button
+        android:id="@+id/btnSetEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSelectTime"
+        android:text="@string/set_event"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

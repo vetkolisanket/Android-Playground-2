@@ -64,4 +64,9 @@
     <string name="value">value</string>
     <string name="save">save</string>
     <string name="show">show</string>
+    <string name="add_calendar_event">Add calendar event</string>
+    <string name="enter_event_title">Enter event title</string>
+    <string name="select_date">Select date</string>
+    <string name="select_time">Select Time</string>
+    <string name="set_event">Set Event</string>
 </resources>
