@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".commons.App"
@@ -18,18 +19,20 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".misc.permissions.LocationPermissionActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".misc.RuntimePermissionsActivity"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".misc.AddCalendarEventActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
         <activity
             android:name=".misc.EncryptedSharedPreferencesActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
         <activity
             android:name=".misc.DynamicLauncherIconAndTextActivity"

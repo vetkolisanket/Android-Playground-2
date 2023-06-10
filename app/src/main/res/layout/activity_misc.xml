@@ -29,4 +29,11 @@
         android:text="@string/add_calendar_event"
         />
 
+    <Button
+        android:id="@+id/btnRuntimePermissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/runtime_permissions"
+        />
+
 </LinearLayout>

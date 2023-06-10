@@ -22,6 +22,7 @@ class MiscActivity : AppCompatActivity() {
             btnDynamicLauncherIconAndText.setOnClickListener { openActivity<DynamicLauncherIconAndTextActivity>() }
             btnEncryptedSharedPreferences.setOnClickListener { openActivity<EncryptedSharedPreferencesActivity>() }
             btnAddCalendarEvent.setOnClickListener { openActivity<AddCalendarEventActivity>() }
+            btnRuntimePermissions.setOnClickListener { openActivity<RuntimePermissionsActivity>() }
         }
     }
 }
