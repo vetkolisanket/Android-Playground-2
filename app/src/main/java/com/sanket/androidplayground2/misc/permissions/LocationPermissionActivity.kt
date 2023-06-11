@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 import com.google.android.gms.location.CurrentLocationRequest
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.Priority
 import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.databinding.ActivityLocationPermissionBinding
 
@@ -64,12 +65,14 @@ class LocationPermissionActivity : AppCompatActivity() {
         /*fusedLocationClient.lastLocation.addOnSuccessListener {
             binding.tvLocation.text = "$it"
         }*/
-        fusedLocationClient.getCurrentLocation(
-                    CurrentLocationRequest.Builder().build(),
-                    null
-                ).addOnSuccessListener {
-                    binding.tvLocation.text = "$it"
-                }
+        val usePreciseLocation = true
+        val priority = if (usePreciseLocation) {
+            Priority.PRIORITY_HIGH_ACCURACY
+        } else {
+            Priority.PRIORITY_BALANCED_POWER_ACCURACY
+        }
+        fusedLocationClient.getCurrentLocation(priority, null)
+            .addOnSuccessListener { binding.tvLocation.text = "$it" }
     }
 
     private fun showExplainer() {
