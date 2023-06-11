@@ -93,6 +93,9 @@ dependencies {
     // For App Authentication APIs
     implementation "androidx.security:security-app-authenticator:1.0.0-alpha02"
 
+    //For fused location provider
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
     // For App Authentication API testing
     androidTestImplementation "androidx.security:security-app-authenticator:1.0.0-alpha02"
 
