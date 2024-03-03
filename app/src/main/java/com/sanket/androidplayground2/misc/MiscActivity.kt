@@ -2,10 +2,9 @@ package com.sanket.androidplayground2.misc
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.commons.utils.openActivity
+import com.sanket.androidplayground2.custom.CustomThreadPoolActivity
 import com.sanket.androidplayground2.databinding.ActivityMiscBinding
-import kotlinx.android.synthetic.main.activity_misc.*
 
 class MiscActivity : AppCompatActivity() {
 
@@ -23,6 +22,7 @@ class MiscActivity : AppCompatActivity() {
             btnEncryptedSharedPreferences.setOnClickListener { openActivity<EncryptedSharedPreferencesActivity>() }
             btnAddCalendarEvent.setOnClickListener { openActivity<AddCalendarEventActivity>() }
             btnRuntimePermissions.setOnClickListener { openActivity<RuntimePermissionsActivity>() }
+            btnCustomThreadPoolService.setOnClickListener { openActivity<CustomThreadPoolActivity>() }
         }
     }
 }

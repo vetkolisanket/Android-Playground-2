@@ -71,4 +71,5 @@
     <string name="set_event">Set Event</string>
     <string name="runtime_permissions">Runtime permissions</string>
     <string name="location">Location</string>
+    <string name="custom_thread_pool_service">Custom Thread Pool Service</string>
 </resources>
