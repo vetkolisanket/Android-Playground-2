@@ -16,7 +16,7 @@ class ForegroundService: Service() {
         val text = intent?.getStringExtra(Constants.TEXT) ?: Constants.EMPTY_STRING
 
         val notificationIntent = Intent(this, ForegroundServiceActivity::class.java)
-        val pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0)
+        val pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE)
 
         val notification = NotificationCompat.Builder(this, Constants.CHANNEL_ID)
             .setContentTitle(getString(R.string.foreground_service_title))

@@ -9,7 +9,7 @@ apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
     defaultConfig {
         applicationId "com.sanket.androidplayground2"
         minSdkVersion 24
@@ -95,6 +95,8 @@ dependencies {
 
     //For fused location provider
     implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+    implementation 'com.github.vetkolisanket:AndroidCachingLibrary:0.0.4'
 
     // For App Authentication API testing
     androidTestImplementation "androidx.security:security-app-authenticator:1.0.0-alpha02"
