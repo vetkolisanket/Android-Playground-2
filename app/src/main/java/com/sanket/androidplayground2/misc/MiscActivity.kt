@@ -23,6 +23,7 @@ class MiscActivity : AppCompatActivity() {
             btnAddCalendarEvent.setOnClickListener { openActivity<AddCalendarEventActivity>() }
             btnRuntimePermissions.setOnClickListener { openActivity<RuntimePermissionsActivity>() }
             btnCustomThreadPoolService.setOnClickListener { openActivity<CustomThreadPoolActivity>() }
+            btnImageCompression.setOnClickListener { openActivity<ImageCompressionActivity>() }
         }
     }
 }

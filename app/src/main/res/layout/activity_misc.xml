@@ -43,4 +43,11 @@
         android:text="@string/custom_thread_pool_service"
         />
 
+    <Button
+        android:id="@+id/btnImageCompression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/image_compression_using_work_manager"
+        />
+
 </LinearLayout>

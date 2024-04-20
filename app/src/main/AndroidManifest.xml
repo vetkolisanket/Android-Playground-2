@@ -19,20 +19,31 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".misc.ImageCompressionActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".custom.CustomThreadPoolActivity"
             android:exported="false" />
         <activity
             android:name=".misc.permissions.LocationPermissionActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".misc.RuntimePermissionsActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".misc.AddCalendarEventActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".misc.EncryptedSharedPreferencesActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".misc.DynamicLauncherIconAndTextActivity"
             android:exported="false" />
@@ -102,11 +113,11 @@
         </activity>
 
         <activity-alias
-            android:name=".ThreeLauncherAlias"
-            android:enabled="false"
+            android:name=".OneLauncherAlias"
+            android:enabled="true"
             android:exported="true"
-            android:icon="@drawable/ic_baseline_outlet_24"
-            android:label="Three"
+            android:icon="@drawable/ic_baseline_mood_24"
+            android:label="One"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -128,11 +139,11 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:name=".OneLauncherAlias"
-            android:enabled="true"
+            android:name=".ThreeLauncherAlias"
+            android:enabled="false"
             android:exported="true"
-            android:icon="@drawable/ic_baseline_mood_24"
-            android:label="One"
+            android:icon="@drawable/ic_baseline_outlet_24"
+            android:label="Three"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
