@@ -19,13 +19,19 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".flow.FlowActivity"
+            android:exported="false"
+            android:label="@string/title_activity_flow"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".misc.ImageCompressionActivity"
             android:exported="true"
-            android:launchMode="singleTop"
-            >
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
@@ -113,11 +119,11 @@
         </activity>
 
         <activity-alias
-            android:name=".OneLauncherAlias"
-            android:enabled="true"
+            android:name=".ThreeLauncherAlias"
+            android:enabled="false"
             android:exported="true"
-            android:icon="@drawable/ic_baseline_mood_24"
-            android:label="One"
+            android:icon="@drawable/ic_baseline_outlet_24"
+            android:label="Three"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -139,11 +145,11 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:name=".ThreeLauncherAlias"
-            android:enabled="false"
+            android:name=".OneLauncherAlias"
+            android:enabled="true"
             android:exported="true"
-            android:icon="@drawable/ic_baseline_outlet_24"
-            android:label="Three"
+            android:icon="@drawable/ic_baseline_mood_24"
+            android:label="One"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

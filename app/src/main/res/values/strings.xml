@@ -73,4 +73,6 @@
     <string name="location">Location</string>
     <string name="custom_thread_pool_service">Custom Thread Pool Service</string>
     <string name="image_compression_using_work_manager">Image Compression using Work Manager</string>
+    <string name="flows">Flow</string>
+    <string name="title_activity_flow">FlowActivity</string>
 </resources>

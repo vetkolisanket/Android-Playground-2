@@ -7,6 +7,7 @@ import com.sanket.androidplayground2.commons.utils.openActivity
 import com.sanket.androidplayground2.communication.CommunicationActivity
 import com.sanket.androidplayground2.compose.ComposeActivity
 import com.sanket.androidplayground2.coroutines.CoroutinesExamplesActivity
+import com.sanket.androidplayground2.flow.FlowActivity
 import com.sanket.androidplayground2.hilt.HiltActivity
 import com.sanket.androidplayground2.misc.MiscActivity
 import com.sanket.androidplayground2.third_party.LibrariesActivity
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         btnInternetObserver.setOnClickListener { openActivity<InternetObserverActivity>() }
         btnCommunication.setOnClickListener { openActivity<CommunicationActivity>() }
         btnMisc.setOnClickListener { openActivity<MiscActivity>() }
+        btnFlows.setOnClickListener { openActivity<FlowActivity>() }
     }
 
 
