@@ -1,4 +1,4 @@
-package com.sanket.androidplayground2.compose
+package com.sanket.androidplayground2.compose.components
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

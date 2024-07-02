@@ -1,4 +1,4 @@
-package com.sanket.androidplayground2.compose
+package com.sanket.androidplayground2.compose.components
 
 import android.util.Log
 import androidx.compose.foundation.text.ClickableText
