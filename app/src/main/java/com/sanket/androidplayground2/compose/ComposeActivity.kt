@@ -20,6 +20,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -51,6 +53,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sanket.androidplayground2.R
+import com.sanket.androidplayground2.compose.components.AlertDialogHolder
 import com.sanket.androidplayground2.compose.components.AnnotatedClickableText
 import com.sanket.androidplayground2.compose.components.LetterByLetterAnimatedText
 import com.sanket.androidplayground2.compose.components.MultipleStylesInText
@@ -66,6 +69,9 @@ class ComposeActivity : AppCompatActivity() {
                 SnackbarHostState()
             }
             val scope = rememberCoroutineScope()
+            val openAlertDialog = remember {
+                mutableStateOf(false)
+            }
 
             ComposeTutorialTheme {
                 Scaffold(
@@ -102,6 +108,27 @@ class ComposeActivity : AppCompatActivity() {
                         MultipleStylesInText()
                         AnnotatedClickableText()
                         LetterByLetterAnimatedText()
+                        Button(onClick = { openAlertDialog.value = true }) {
+                            Text(text = "Open Dialog")
+                        }
+                        when {
+                            openAlertDialog.value -> {
+                                AlertDialogHolder(
+                                    onDismissRequest = { openAlertDialog.value = false },
+                                    onConfirmation = {
+                                        openAlertDialog.value = false
+                                        scope.launch {
+                                            snackbarHostState.showSnackbar(
+                                                "Confirmed"
+                                            )
+                                        }
+                                    },
+                                    title = "Dummy title",
+                                    text = "Lorem Ipsum Dolor Sit Amet",
+                                    icon = Icons.Default.Info
+                                )
+                            }
+                        }
                     }
                 }
             }
@@ -134,7 +161,7 @@ fun CircularProgressBar(
         animationPlayed = true
     }
 
-    Box (
+    Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier
             .size(radius * 2)
