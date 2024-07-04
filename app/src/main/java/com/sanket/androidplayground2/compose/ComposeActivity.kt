@@ -53,6 +53,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sanket.androidplayground2.R
+import com.sanket.androidplayground2.commons.utils.openActivity
 import com.sanket.androidplayground2.compose.components.AlertDialogHolder
 import com.sanket.androidplayground2.compose.components.AnnotatedClickableText
 import com.sanket.androidplayground2.compose.components.LetterByLetterAnimatedText
@@ -128,6 +129,9 @@ class ComposeActivity : AppCompatActivity() {
                                     icon = Icons.Default.Info
                                 )
                             }
+                        }
+                        Button(onClick = { openActivity<ScaffoldExampleActivity>() }) {
+                            Text(text = "Open Large Top App Bar Scaffold Activity")
                         }
                     }
                 }

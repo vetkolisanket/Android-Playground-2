@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:name=".commons.App"
@@ -18,6 +19,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+        <activity
+            android:name=".compose.ScaffoldExampleActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scaffold_example"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".flow.FlowActivity"
             android:exported="false"
@@ -119,11 +125,11 @@
         </activity>
 
         <activity-alias
-            android:name=".ThreeLauncherAlias"
-            android:enabled="false"
+            android:name=".OneLauncherAlias"
+            android:enabled="true"
             android:exported="true"
-            android:icon="@drawable/ic_baseline_outlet_24"
-            android:label="Three"
+            android:icon="@drawable/ic_baseline_mood_24"
+            android:label="One"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -145,11 +151,11 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:name=".OneLauncherAlias"
-            android:enabled="true"
+            android:name=".ThreeLauncherAlias"
+            android:enabled="false"
             android:exported="true"
-            android:icon="@drawable/ic_baseline_mood_24"
-            android:label="One"
+            android:icon="@drawable/ic_baseline_outlet_24"
+            android:label="Three"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
