@@ -178,7 +178,7 @@ fun ScrollContent(innerPadding: PaddingValues) {
                 ),
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp)
+                    .fillParentMaxHeight(0.2F)
             ) {
                 Text(
                     text = "- List item number ${index + 1}",
@@ -199,6 +199,7 @@ fun InputChipExample() {
         enabled = !enabled
     }
     InputChip(
+        modifier = Modifier.padding(16.dp),
         selected = enabled,
         onClick = { onClick() },
         label = { Text(text = if (enabled) "selected" else "unselected") },
