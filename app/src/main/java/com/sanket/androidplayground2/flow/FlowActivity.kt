@@ -53,7 +53,9 @@ class FlowActivity : ComponentActivity() {
                             Column(
                                 horizontalAlignment = Alignment.CenterHorizontally
                             ) {
-                                CircularProgressIndicator(color = Color.White)
+                                CircularProgressIndicator(
+                                    color = Color.White,
+                                    progress = { viewModel.progressState.toFloat()/100 })
                                 Text(
                                     color = Color.White,
                                     text = "Processing user data (${viewModel.progressState} %) ..."
