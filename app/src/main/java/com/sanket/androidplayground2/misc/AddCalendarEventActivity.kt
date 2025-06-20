@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.CalendarContract
-import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.databinding.ActivityAddCalendarEventBinding
 import java.util.Calendar
 
@@ -14,7 +13,7 @@ class AddCalendarEventActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_calendar_event)
+        setContentView(binding.root)
         binding.btnSetEvent.setOnClickListener {
             setEvent()
         }

@@ -8,18 +8,21 @@ import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.appcomponents.activity.ExamplesActivity
 import com.sanket.androidplayground2.appcomponents.services.activities.ServicesExampleActivity
 import com.sanket.androidplayground2.commons.utils.openActivity
-import kotlinx.android.synthetic.main.activity_app_components.*
+import com.sanket.androidplayground2.databinding.ActivityAppComponentsBinding
 
 class AppComponentsActivity : AppCompatActivity() {
+
+    val binding by lazy { ActivityAppComponentsBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_app_components)
+        setContentView(binding.root)
         initBtns()
     }
 
     private fun initBtns() {
-        btnService.setOnClickListener { openActivity<ServicesExampleActivity>() }
-        btnActivity.setOnClickListener { openActivity<ExamplesActivity>() }
+        binding.btnService.setOnClickListener { openActivity<ServicesExampleActivity>() }
+        binding.btnActivity.setOnClickListener { openActivity<ExamplesActivity>() }
     }
 
     companion object {

@@ -3,7 +3,6 @@ package com.sanket.androidplayground2.hilt
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.isGone
@@ -14,33 +13,34 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.commons.utils.Status
 import com.sanket.androidplayground2.data.model.User
+import com.sanket.androidplayground2.databinding.ActivityHiltBinding
 import com.sanket.androidplayground2.di.module.ApiKey
 import com.sanket.androidplayground2.di.module.LibraryKey
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_hilt.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class HiltActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         val TAG = HiltActivity::class.java.simpleName
     }
 
     @ApiKey
     @Inject
-    lateinit var apiKey:String
+    lateinit var apiKey: String
 
     @LibraryKey
     @Inject
-    lateinit var libraryKey:String
+    lateinit var libraryKey: String
 
     private val userViewModel: UserViewModel by viewModels()
     private lateinit var adapter: UserAdapter
+    private val binding by lazy { ActivityHiltBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hilt)
+        setContentView(binding.root)
         setupUI()
         setupObserver()
         Log.d(TAG, "onCreate: $apiKey")
@@ -51,16 +51,20 @@ class HiltActivity : AppCompatActivity() {
         userViewModel.getUsers().observe(this, Observer {
             when (it.status) {
                 Status.SUCCESS -> {
-                    progressBar.isGone = true
+                    binding.progressBar.isGone = true
                     it.data?.let { users -> renderList(users) }
-                    recyclerView.isVisible = true
+                    binding.recyclerView.isVisible = true
                 }
+
                 Status.LOADING -> {
-                    progressBar.isVisible = true
-                    recyclerView.isGone = true
+                    binding.apply {
+                        progressBar.isVisible = true
+                        recyclerView.isGone = true
+                    }
                 }
+
                 Status.ERROR -> {
-                    progressBar.isGone = true
+                    binding.progressBar.isGone = true
                     Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
                 }
             }
@@ -76,12 +80,12 @@ class HiltActivity : AppCompatActivity() {
 
     private fun setupUI() {
         adapter = UserAdapter(arrayListOf())
-        recyclerView.apply {
+        binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(this@HiltActivity)
             addItemDecoration(
                 DividerItemDecoration(
                     this@HiltActivity,
-                    (recyclerView.layoutManager as LinearLayoutManager).orientation
+                    (binding.recyclerView.layoutManager as LinearLayoutManager).orientation
                 )
             )
             adapter = this@HiltActivity.adapter

@@ -9,9 +9,12 @@ import androidx.core.content.ContextCompat
 import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.appcomponents.services.services.ForegroundService
 import com.sanket.androidplayground2.commons.Constants
-import kotlinx.android.synthetic.main.activity_foreground_service.*
+import com.sanket.androidplayground2.databinding.ActivityForegroundServiceBinding
 
 class ForegroundServiceActivity : AppCompatActivity() {
+
+    private val binding by lazy { ActivityForegroundServiceBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_foreground_service)
@@ -21,10 +24,10 @@ class ForegroundServiceActivity : AppCompatActivity() {
     private fun initBtns() {
         val foregroundService = Intent(this, ForegroundService::class.java)
         foregroundService.putExtra(Constants.TEXT, getString(R.string.description))
-        btnStartService.setOnClickListener {
+        binding.btnStartService.setOnClickListener {
             Toast.makeText(this, getString(R.string.starting_service), Toast.LENGTH_SHORT).show()
             ContextCompat.startForegroundService(this, foregroundService) }
-        btnStopService.setOnClickListener {
+        binding.btnStopService.setOnClickListener {
             Toast.makeText(this, getString(R.string.stopping_service), Toast.LENGTH_SHORT).show()
             stopService(foregroundService)
         }

@@ -1,7 +1,6 @@
 package com.sanket.androidplayground2.appcomponents.activity
 
 import android.os.Bundle
-import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.commons.utils.openActivity
 import com.sanket.androidplayground2.databinding.ActivityAlifecycleBinding
 

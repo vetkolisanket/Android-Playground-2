@@ -9,8 +9,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.sanket.androidplayground2.databinding.FragmentSimpleCoroutinesBinding
-import kotlinx.android.synthetic.main.fragment_simple_coroutines.*
-import kotlinx.android.synthetic.main.fragment_simple_coroutines.view.*
 import kotlinx.coroutines.*
 import kotlin.coroutines.resume
 import kotlin.random.Random
@@ -42,7 +40,7 @@ class SimpleCoroutinesFragment private constructor() : Fragment() {
     }
 
     private fun setupBtnSuspendCancellableCoroutine() {
-        btnSuspendCancellableCoroutine.setOnClickListener {
+        binding.btnSuspendCancellableCoroutine.setOnClickListener {
             lifecycleScope.launch(Dispatchers.IO) {
                 val workString = withTimeoutOrNull(2000) {
                     val work1 = doWork1(Random.nextLong(500, 1500))
@@ -55,13 +53,13 @@ class SimpleCoroutinesFragment private constructor() : Fragment() {
                     }
                     work
                 }
-                workString?.let { tvResult.text = it }
+                workString?.let { binding.tvResult.text = it }
             }
         }
     }
 
     private fun setupBtnWithTimeoutOrNull() {
-        btnWithTimeoutOrNull.setOnClickListener {
+        binding.btnWithTimeoutOrNull.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 val time = System.currentTimeMillis()
                 val work = withTimeoutOrNull(2000) {
@@ -71,7 +69,7 @@ class SimpleCoroutinesFragment private constructor() : Fragment() {
                 }
                 withContext(Dispatchers.Main) {
                     work?.let {
-                        tvResult.text = it
+                        binding.tvResult.text = it
                         Toast.makeText(
                             context,
                             "Time taken with timeout ${System.currentTimeMillis() - time}",
@@ -86,7 +84,7 @@ class SimpleCoroutinesFragment private constructor() : Fragment() {
     }
 
     private fun setupBtnWorkParallelly() {
-        btnWorkParallelly.setOnClickListener {
+        binding.btnWorkParallelly.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 val time = System.currentTimeMillis()
                 val work1Async = async { doWork1() }
@@ -95,7 +93,7 @@ class SimpleCoroutinesFragment private constructor() : Fragment() {
                 text.append("${work1Async.await()} ")
                 text.append("${work2Async.await()} ")
                 withContext(Dispatchers.Main) {
-                    tvResult.text = text.trim().toString()
+                    binding.tvResult.text = text.trim().toString()
                     Toast.makeText(
                         context,
                         "Time taken parallelly ${System.currentTimeMillis() - time}",
@@ -107,13 +105,13 @@ class SimpleCoroutinesFragment private constructor() : Fragment() {
     }
 
     private fun View.setupBtnWorkSerially() {
-        btnWorkSerially.setOnClickListener {
+        binding.btnWorkSerially.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 val time = System.currentTimeMillis()
                 val work1 = doWork1()
                 val work2 = doWork2()
                 withContext(Dispatchers.Main) {
-                    tvResult.text = "$work1 $work2"
+                    binding.tvResult.text = "$work1 $work2"
                     Toast.makeText(
                         context,
                         "Time taken serially ${System.currentTimeMillis() - time}",
@@ -125,12 +123,12 @@ class SimpleCoroutinesFragment private constructor() : Fragment() {
     }
 
     private fun View.setupBtnWork2() {
-        btnWork2.setOnClickListener {
+        binding.btnWork2.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 val time = System.currentTimeMillis()
                 val work2 = doWork2()
                 withContext(Dispatchers.Main) {
-                    tvResult.text = work2
+                    binding.tvResult.text = work2
                     Toast.makeText(
                         context,
                         "Time taken for work two ${System.currentTimeMillis() - time}",
@@ -142,12 +140,12 @@ class SimpleCoroutinesFragment private constructor() : Fragment() {
     }
 
     private fun View.setupBtnWork1() {
-        btnWork1.setOnClickListener {
+        binding.btnWork1.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 val time = System.currentTimeMillis()
                 val work1 = doWork1()
                 withContext(Dispatchers.Main) {
-                    tvResult.text = work1
+                    binding.tvResult.text = work1
                     Toast.makeText(
                         context,
                         "Time taken for work one ${System.currentTimeMillis() - time}",

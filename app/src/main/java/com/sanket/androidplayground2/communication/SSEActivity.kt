@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.lifecycleScope
-import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.commons.utils.TAG
+import com.sanket.androidplayground2.databinding.ActivitySseactivityBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.*
@@ -16,9 +16,12 @@ import java.io.IOException
 import java.util.concurrent.TimeUnit
 
 class SSEActivity : AppCompatActivity() {
+
+    private val binding by lazy { ActivitySseactivityBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sseactivity)
+        setContentView(binding.root)
 
         val eventSourceListener = object : EventSourceListener() {
             override fun onOpen(eventSource: EventSource, response: Response) {

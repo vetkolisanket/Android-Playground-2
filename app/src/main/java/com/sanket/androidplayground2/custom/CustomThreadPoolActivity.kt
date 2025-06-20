@@ -2,15 +2,16 @@ package com.sanket.androidplayground2.custom
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sanket.androidplayground2.R
+import com.sanket.androidplayground2.databinding.ActivityCustomThreadPoolBinding
 
 class CustomThreadPoolActivity : AppCompatActivity() {
 
     private val customThreadPoolService by lazy { CustomThreadPoolService() }
+    private val binding by lazy { ActivityCustomThreadPoolBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_custom_thread_pool)
+        setContentView(binding.root)
 
         for (i in 0 until 10) {
             val runnable = Runnable {

@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.speech.RecognizerIntent
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_speech_to_text.*
+import com.sanket.androidplayground2.databinding.ActivitySpeechToTextBinding
 import java.util.*
 
 class SpeechToTextActivity : AppCompatActivity() {
@@ -19,14 +19,16 @@ class SpeechToTextActivity : AppCompatActivity() {
         fun newIntent(context: Context) = Intent(context, SpeechToTextActivity::class.java)
     }
 
+    private val binding by lazy { ActivitySpeechToTextBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_speech_to_text)
+        setContentView(binding.root)
         init()
     }
 
     private fun init() {
-        ivMic.setOnClickListener {
+        binding.ivMic.setOnClickListener {
             promptSpeechInput()
         }
     }

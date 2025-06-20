@@ -2,7 +2,7 @@ package com.sanket.androidplayground2.di.module
 
 import android.content.Context
 import androidx.room.Room
-import com.sanket.androidplayground2.BuildConfig
+import com.airbnb.lottie.BuildConfig
 import com.sanket.androidplayground2.data.api.ApiConstants
 import com.sanket.androidplayground2.data.api.ApiHelper
 import com.sanket.androidplayground2.data.api.ApiHelperImpl

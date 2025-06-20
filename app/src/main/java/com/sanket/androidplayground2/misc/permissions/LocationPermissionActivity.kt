@@ -1,19 +1,16 @@
 package com.sanket.androidplayground2.misc.permissions
 
 import android.Manifest
-import android.content.DialogInterface
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.google.android.gms.location.CurrentLocationRequest
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
-import com.sanket.androidplayground2.R
 import com.sanket.androidplayground2.databinding.ActivityLocationPermissionBinding
 
 class LocationPermissionActivity : AppCompatActivity() {

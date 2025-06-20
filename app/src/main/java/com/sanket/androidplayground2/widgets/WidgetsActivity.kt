@@ -1,10 +1,7 @@
 package com.sanket.androidplayground2.widgets
 
-import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sanket.androidplayground2.R
+import androidx.appcompat.app.AppCompatActivity
 import com.sanket.androidplayground2.databinding.ActivityWidgetsBinding
 
 class WidgetsActivity : AppCompatActivity() {
