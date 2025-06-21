@@ -24,6 +24,7 @@ class MiscActivity : AppCompatActivity() {
             btnRuntimePermissions.setOnClickListener { openActivity<RuntimePermissionsActivity>() }
             btnCustomThreadPoolService.setOnClickListener { openActivity<CustomThreadPoolActivity>() }
             btnImageCompression.setOnClickListener { openActivity<ImageCompressionActivity>() }
+            btnOOM.setOnClickListener { openActivity<OOMActivity>() }
         }
     }
 }

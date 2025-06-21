@@ -76,4 +76,6 @@
     <string name="flows">Flow</string>
     <string name="title_activity_flow">FlowActivity</string>
     <string name="title_activity_scaffold_example">ScaffoldExampleActivity</string>
+    <string name="out_of_memory">Out Of Memory</string>
+    <string name="title_activity_oomactivity">OOMActivity</string>
 </resources>
