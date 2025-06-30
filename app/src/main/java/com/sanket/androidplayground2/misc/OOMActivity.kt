@@ -5,7 +5,8 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -70,22 +71,31 @@ class OOMActivity : ComponentActivity() {
 
 @Composable
 fun OOMCompose(modifier: Modifier = Modifier, block: () -> Unit = {}) {
-    Box(
+    Column (
         modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     ) {
         Button(
             onClick = {
                 block()
             },
             modifier = Modifier
-                .align(Alignment.Center)
+
         ) {
-            Text("Execute")
+            Text("Add items")
+        }
+        Button(
+            onClick = {
+
+            },
+            modifier = Modifier
+
+        ) {
+            Text("Create threads")
         }
     }
 }
-
-
 
 fun logCurrentMemoryProfile(src: String) {
     val maxMemoryInMB = Runtime.getRuntime().maxMemory() / 1024 / 1024
